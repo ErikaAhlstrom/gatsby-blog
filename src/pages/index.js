@@ -6,7 +6,9 @@ export default function Home() {
   return (
     <Layout>
       <SEO title="Home"/>
-      <h1>Home Page</h1>
+      <main className="page">
+        <h1>Home Page</h1>
+      </main>
     </Layout>
   )
 }

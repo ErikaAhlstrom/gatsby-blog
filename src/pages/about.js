@@ -7,7 +7,10 @@ const About = () => {
     return (
         <Layout>
             <SEO title="Contact"/>
-            <h1>About Page</h1>
+            <main className="page">
+                <h1>About Page</h1>
+
+            </main>
         </Layout>
     )
 }
