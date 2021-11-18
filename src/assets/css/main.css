@@ -360,9 +360,11 @@ form > *:last-child {
 }
 .nav-btn {
   padding: 0.15rem 0.75rem;
+  background: none;
 }
 .nav-btn svg {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  color: var(--grey-1000)
 }
 .nav-links {
   height: 0;
