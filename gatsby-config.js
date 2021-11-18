@@ -1,4 +1,8 @@
 
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`, 
+});
+
 module.exports = {
   siteMetadata: {
     title: 'Simply A Blog',
@@ -6,6 +10,24 @@ module.exports = {
     author: 'Erika Ahlström',
   },
   plugins: [
-    `gatsby-plugin-react-helmet`
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/assets/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
   ],
 }
