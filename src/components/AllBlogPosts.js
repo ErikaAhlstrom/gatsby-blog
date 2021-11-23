@@ -27,10 +27,10 @@ const AllBlogPosts = () => {
         allContentfulSimpleBlogPost: {nodes: blogPosts}
     } = useStaticQuery(query)
     return (
-        <div>
+        <section className="blogPosts-container">
             <TagsList blogPosts={blogPosts}/>
             <BlogPostsList blogPosts={blogPosts}/>
-        </div>
+        </section>
     )
 }
 
