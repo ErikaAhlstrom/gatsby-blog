@@ -22,7 +22,7 @@ const query = graphql`
   }
 `
 
-const AllBlogPosts = () => {
+const FeaturedBlogPosts = () => {
     const {
         allContentfulSimpleBlogPost: {nodes: blogPosts}
     } = useStaticQuery(query)
