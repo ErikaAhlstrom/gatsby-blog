@@ -5,15 +5,17 @@ import slugify from 'slugify'
 
 const TagsList = ({ blogPosts=[] }) => {
     const newTags = setupTags(blogPosts)
-    console.log(newTags);
     return (
-        <div>
+        <div className="tags-container">
+            <h4>Explore</h4>
+            <hr className="tags-list-line" />
+            <div className="tags-list">
             {newTags.map((tag, index) => {
                 const [text, value] = tag
                 const slug = slugify(text, {lower:true})
-                    console.log(text)
-                    return <Link key={text} to={`/tags/${slug}`}>{`| ${text} |`}</Link>
+                    return <Link key={text} to={`/tags/${slug}`}>{text}</Link>
                 })}
+            </div>
         </div>
     )
 }
