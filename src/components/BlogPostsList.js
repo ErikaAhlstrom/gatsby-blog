@@ -23,8 +23,9 @@ const BlogPostsList = ({ blogPosts=[] }) => {
                         alt={title}
                     />
                     <h5>{title}</h5>
-                    <p>{postedAt} </p>
-                    <p>{author} </p>
+                    <hr className="blog-item-line" />
+                    <p> {postedAt} </p>
+                    <p className="blogPostAuthor">by {author} </p>
                     </Link>
                 )
             })}
