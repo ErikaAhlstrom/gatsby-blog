@@ -7,7 +7,6 @@ const TagsList = ({ blogPosts=[] }) => {
     const newTags = setupTags(blogPosts)
     return (
         <div className="tags-container">
-            <h4>Explore</h4>
             <hr className="tags-list-line" />
             <div className="tags-list">
             {newTags.map((tag, index) => {
@@ -16,6 +15,7 @@ const TagsList = ({ blogPosts=[] }) => {
                     return <Link key={text} to={`/tags/${slug}`}>{text}</Link>
                 })}
             </div>
+             <hr className="tags-list-line" />
         </div>
     )
 }
