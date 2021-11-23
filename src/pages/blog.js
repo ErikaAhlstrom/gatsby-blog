@@ -8,7 +8,6 @@ const Blog = () => {
         <Layout>
             <SEO title="Blog"/>
             <main className="page">
-                <h1>Blog Page</h1>
                 <AllBlogPosts />
             </main>
         </Layout>
