@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import { GiHamburgerMenu } from 'react-icons/gi'
-import logo from '../assets/images/logo.png'
+import logo from '../assets/images/pw-logo.svg'
 
 const Navbar = () => {
     const [show, setShow] = useState(false)
@@ -11,7 +11,7 @@ const Navbar = () => {
 
                 <div className="nav-header">
                     <Link to="/">
-                        <img src={logo} alt="simply recipes" />
+                        <img src={logo} alt="simply blogPosts" />
                     </Link>
                     <div className="nav-btn" onClick={() => setShow(!show)}>
                         <GiHamburgerMenu />
