@@ -1,15 +1,16 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import { StaticImage } from "gatsby-plugin-image"
-import AllBlogPosts from "../components/AllBlogPosts"
+import BlogPostsList from '../components/BlogPostsList'
 
-const About = () => {
+const About = ( {data} ) => {
     return (
         <Layout>
             <SEO title="Contact"/>
             <main className="page">
-                <section className="contact-page">
+                <section className="layout-page">
                     <StaticImage
                         src="../assets/images/about.jpg"
                         alt="Leaves"
@@ -24,10 +25,34 @@ const About = () => {
                     </article>
                     
                 </section>
+                <section className="featured-blogPosts">
+                        <hr className="blog-item-line" />
+                        <h5>Up for a cozy read?</h5>
+                        <BlogPostsList blogPosts={data.allContentfulSimpleBlogPost.nodes}/>
+              </section>
 
             </main>
         </Layout>
     )
 }
+
+export const query = graphql`
+  {
+    allContentfulSimpleBlogPost(sort: {fields: postedAt, order: DESC}) {
+      nodes {
+        author
+        title
+        tags {
+          tags
+        }
+        postedAt(formatString: "DD MMMM, YYYY")
+        image {
+          gatsbyImageData(placeholder: TRACED_SVG, layout: CONSTRAINED)
+        }
+        id
+      }
+    }
+  }
+`
 
 export default About

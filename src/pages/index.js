@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import SEO from '../components/SEO'
 import { StaticImage } from "gatsby-plugin-image"
-import AllBlogPosts from "../components/AllBlogPosts"
+import FeaturedBlogPosts from "../components/FeaturedBlogPosts"
 export default function Home() {
   return (
     <Layout>
@@ -23,7 +23,7 @@ export default function Home() {
             </div>
           </div>
         </header>
-        <section className="contact-page">
+        <section className="layout-page">
            <StaticImage
             src="../assets/images/girl-in-chair.jpg"
             alt="Girl reading in a chair."
@@ -37,7 +37,7 @@ export default function Home() {
             <p>Fugiat iusto aliquid officiis libero velit dicta, assumenda, odio mollitia voluptatibus dolorum alias ut recusandae! Recusandae nostrum modi assumenda voluptatum deleniti dolore.</p>
           </article>
         </section>
-        <AllBlogPosts />
+        <FeaturedBlogPosts />
       </main>
     </Layout>
   )

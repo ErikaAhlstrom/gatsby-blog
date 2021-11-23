@@ -37,7 +37,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         <Layout>
         <SEO title={pageContext.title} />
         <main className="page">
-            <section className="contact-page">
+            <section className="layout-page">
                 <h1>{title}</h1>
                 <div className="blogPost-page">
                         <GatsbyImage
