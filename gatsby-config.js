@@ -29,5 +29,13 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Sacramento', 'Outfit Sans:100, 200, 300, 400, 500, 600, 700, 800, 900']
+        }
+      }
+    }
   ],
 }
