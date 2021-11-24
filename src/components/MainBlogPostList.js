@@ -28,6 +28,7 @@ const MainBlogPostList = ({ blogPosts=[] }) => {
                     <h5>{title}</h5>
                     <hr className="blog-item-line" />
                     <p>{postedAt} </p>
+                    <hr className="blog-item-line" />
                     <p className="blogPostAuthor">by {author} </p>
                     
                     </Link>
