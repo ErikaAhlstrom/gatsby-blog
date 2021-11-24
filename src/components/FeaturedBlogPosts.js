@@ -34,5 +34,5 @@ const FeaturedBlogPosts = () => {
     )
 }
 
-export default AllBlogPosts
+export default FeaturedBlogPosts
 
