@@ -1,11 +1,10 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import BlogPostsList from './BlogPostsList'
-import TagsList from './TagsList'
 
 const query = graphql`
   {
-    allContentfulSimpleBlogPost(sort: {fields: postedAt, order: DESC}) {
+    allContentfulSimpleBlogPost(sort: {fields: postedAt, order: DESC} filter: {featured: {eq: true}}) {
       nodes {
         author
         title
@@ -15,6 +14,7 @@ const query = graphql`
         postedAt(formatString: "DD MMMM, YYYY")
         image {
           gatsbyImageData(placeholder: TRACED_SVG, layout: CONSTRAINED)
+          title
         }
         id
       }
@@ -26,10 +26,12 @@ const FeaturedBlogPosts = () => {
     const {
         allContentfulSimpleBlogPost: {nodes: blogPosts}
     } = useStaticQuery(query)
+
     return (
-        <section className="blogPosts-container">
-            <TagsList blogPosts={blogPosts}/>
-            <BlogPostsList blogPosts={blogPosts}/>
+        <section className="featured-blogPosts">
+          <hr className="blog-item-line" />
+          <h2 >Featured blogposts</h2>
+          <BlogPostsList blogPosts={blogPosts}/>
         </section>
     )
 }
