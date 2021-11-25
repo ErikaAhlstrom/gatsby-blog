@@ -1,9 +1,12 @@
 import React from 'react'
 import setupTags from '../utils/setupTags'
-import { Link } from 'gatsby'
 import slugify from 'slugify'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 
-const TagsList = ({ blogPosts=[] }) => {
+const TagsList = () => {
+    const {
+        allContentfulSimpleBlogPost: {nodes: blogPosts}
+    } = useStaticQuery(query)
     const newTags = setupTags(blogPosts)
     return (
         <div className="tags-container">
@@ -19,5 +22,17 @@ const TagsList = ({ blogPosts=[] }) => {
         </div>
     )
 }
+
+export const query = graphql`
+  {
+    allContentfulSimpleBlogPost {
+      nodes {
+        tags {
+          tags
+        }
+      }
+    }
+  }
+`
 
 export default TagsList
