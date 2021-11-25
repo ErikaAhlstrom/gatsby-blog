@@ -3,6 +3,7 @@ import {graphql} from 'gatsby'
 import BlogPostsList from '../components/BlogPostsList'
 import Layout from '../components/Layout'
 import SEO from "../components/SEO"
+import TagsList from '../components/TagsList'
 
 const TagTemplate = ({data, pageContext}) => {
     const blogPosts = data.allContentfulSimpleBlogPost.nodes
@@ -10,10 +11,15 @@ const TagTemplate = ({data, pageContext}) => {
         <Layout>
             <SEO title={pageContext.tag}/>
             <main className="page">
-                <h2>{pageContext.tag}</h2>
-                <div className="tag-blogPosts">
-                    <BlogPostsList blogPosts={blogPosts} />
-                </div>
+            <section className="blog-page">
+                <TagsList />
+                <article className="fullBlogPost">
+                    {/* <h2>{pageContext.tag}</h2> */}
+                    <div className="tag-blogPosts">
+                        <BlogPostsList blogPosts={blogPosts} />
+                    </div>
+                </article>
+            </section>
             </main>
         </Layout>
     )

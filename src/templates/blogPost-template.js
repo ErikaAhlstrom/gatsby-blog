@@ -6,6 +6,7 @@ import SEO from "../components/SEO"
 import slugify from 'slugify'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { BLOCKS, MARKS } from "@contentful/rich-text-types"
+import TagsList from "../components/TagsList"
 
 
 const BlogPostTemplate = ({ data, pageContext }) => {
@@ -36,22 +37,27 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     return (
         <Layout>
         <SEO title={pageContext.title} />
-        <main className="page">
-            <section className="layout-page">
-                <h1>{title}</h1>
-                <div className="blogPost-page">
-                        <GatsbyImage
-                            image={pathToImage}
-                            alt={image.title}
-                            className="about-img"
-                        />
-                </div>
-            </section>
-            <section>
-                    <div>{output}</div>
+            <main className="page">
+                <section className="blog-page">
+                    <TagsList />
+                    <div className="fullBlogPost">
+                        <h1>{title}</h1>
+                        <hr className="blog-item-line" />
+                            <p>{postedAt}</p>
+                            <p className="blogPostAuthor">by {author} </p>
+                        <div className="blogPost-page">
+                                <GatsbyImage
+                                    image={pathToImage}
+                                    alt={image.title}
+                                    className="about-img"
+                                />
+                        </div>
+                    <div >{output}</div>
+                    </div>
+                </section>
+           
 
-            </section>
-                </main>
+            </main>
         </Layout>
     )
 }
