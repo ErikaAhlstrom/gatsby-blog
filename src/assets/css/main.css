@@ -18,6 +18,7 @@
   /* Accents */
   --accent-primary: #9d4c0c;
   --accent-secondary: #f4bc46;
+  --accent-secondary-light: #ffe1a0;
 
   /* main */
   --primary-500: #50dea2;
@@ -166,7 +167,7 @@ a {
 }
 .form {
   width: 100%;
-  background: var(--white);
+  background: var(--grey-400);
   border-radius: var(--borderRadius);
   box-shadow: var(--shadow-2);
   padding: 2rem 2.5rem;
@@ -176,6 +177,7 @@ label {
   font-size: var(--smallText);
   margin-bottom: 0.5rem;
   text-transform: capitalize;
+  color: var(--grey-800)
 }
 
 input,
@@ -225,7 +227,7 @@ button,
 button:hover,
 .btn:hover {
   color: var(--white);
-  background: var(--grey-600);
+  opacity: 0.8;
   box-shadow: var(--shadow-2);
 }
 button.small {
@@ -281,6 +283,7 @@ button.block {
   max-width: var(--max-width);
   margin: 0 auto;
   min-height: calc(100vh - (6rem + 4rem));
+  margin-bottom: 3rem;
 }
 
 .layout-page {
@@ -289,7 +292,6 @@ button.block {
   padding-bottom: 3rem;
 }
 .layout-page h1 {
-  font-size: 2rem;
 }
 
 @media screen and (min-width: 992px) {
@@ -427,7 +429,7 @@ form > *:last-child {
 }
 
 .nav-link:hover {
-  transform: var(--transform);
+  opacity: 0.7;
 }
 .active-link {
   color: var(--accent-secondary);
@@ -740,6 +742,26 @@ form > *:last-child {
 .tags-list {
   display:flex;
   flex-direction: column;
+}
+
+.postTagsList {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+
+}
+.postTagsList a {
+  margin: 0 1rem 0 0;
+  text-transform: Capitalize;
+  background-color: var(--accent-secondary);
+  color: var(--white);
+  font-size: .7rem;
+  padding: .1rem .7rem;
+  border-radius: .1rem;
+}
+.postTagsList a:hover {
+  opacity: 0.7;
+  transition: var(--transition);
 }
 
 .tags-list-line {
