@@ -11,7 +11,7 @@ const Navbar = () => {
 
                 <div className="nav-header">
                     <Link to="/">
-                        <img src={logo} alt="simply blogPosts" />
+                        <img src={logo} alt="Plant Whisperer Logo" />
                     </Link>
                     <div className="nav-btn" onClick={() => setShow(!show)}>
                         <GiHamburgerMenu />
@@ -24,9 +24,6 @@ const Navbar = () => {
                     <Link to="/blog" className="nav-link" activeClassName="active-link" onClick={() => setShow(!show)}>
                         blog
                     </Link>
-                   {/*  <Link to="/tags" className="nav-link" activeClassName="active-link" onClick={() => setShow(!show)}>
-                        tags
-                    </Link> */}
                     <Link to="/about" className="nav-link" activeClassName="active-link" onClick={() => setShow(!show)}>
                         about
                     </Link>

@@ -23,7 +23,7 @@ const MainBlogPostList = ({ blogPosts=[] }) => {
                     <GatsbyImage
                         image={pathToImage}
                         className="blogPostMain-img"
-                        alt={title}
+                        alt={image.title}
                     />
                     <h5>{title}</h5>
                     <hr className="blog-item-line" />
