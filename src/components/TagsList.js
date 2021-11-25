@@ -18,7 +18,6 @@ const TagsList = () => {
                     return <Link key={text} to={`/tags/${slug}`}>{text}</Link>
                 })}
             </div>
-             <hr className="tags-list-line" />
         </div>
     )
 }
