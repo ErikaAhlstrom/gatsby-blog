@@ -5,7 +5,7 @@ const Footer = () => {
         <footer className="page-footer">
             <p>&copy; {new Date().getFullYear()} Erika Ahlström </p>
             <p>
-                <span> A bog for plant lovers</span>. Built with {" "} <a href="http://gatsby.com">Gatsby js.</a> 
+                A blog for plant lovers. Built with {" "} <a href="http://gatsby.com">Gatsby js.</a> 
             </p>
         </footer>
     )
