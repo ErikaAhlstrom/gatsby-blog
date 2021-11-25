@@ -74,6 +74,7 @@
   --borderRadius: 0.25rem;
   --letterSpacing: 1px;
   --transition: 0.3s ease-in-out all;
+  --transform: scale(1.07);
   --max-width: 1120px;
   --fixed-width: 600px;
 }
@@ -148,6 +149,7 @@ small,
 .special-header {
   font-family: "Sacramento";
   font-size: 3.052rem;
+  text-transform: none;
 }
 
 ul {
@@ -423,6 +425,10 @@ form > *:last-child {
   border-top: 1px solid var(--grey-500);
   transition: var(--transition);
 }
+
+.nav-link:hover {
+  transform: var(--transform);
+}
 .active-link {
   color: var(--accent-secondary);
 }
@@ -483,15 +489,28 @@ form > *:last-child {
 
 .socialMediaBar {
   display: flex;
+  margin: 1.5rem 0;
+}
+
+.center {
+  justify-content: center;
+  margin: 0;
+
 }
 
 .socialMediaBar a {
-  margin: 0 1.2rem 0 0;
-
+  margin: 0 1.5rem 0 0;
+  color: var(--grey-1000);
+  transition: var(--transition);
 }
+
+.socialMediaBar a:hover  {
+  opacity: 0.8;
+  transform: var(--transform);
+}
+
 .socialMediaBar svg {
   color: var(--grey-1000);
-  margin: 0 1.2rem 0 0;
 }
 
 .socialLink {
@@ -508,7 +527,7 @@ form > *:last-child {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: var(--grey-800);
+  background: var(--accent-secondary);
   color: var(--white);
 }
 .page-footer h5 {
@@ -519,7 +538,7 @@ form > *:last-child {
 }
 .page-footer span,
 .page-footer a {
-  color: var(--accent-secondary);
+  color: var(--accent-primary);
 }
 
 /*#########*/
@@ -533,6 +552,20 @@ form > *:last-child {
 .error-page h1 {
   font-size: 9rem;
 }
+
+/*#########*/
+/* Home */
+/*#########*/
+.home-article-img {
+  order: 1;
+}
+
+@media screen and (min-width: 992px) {
+  .home-article-img {
+  order: 0;
+}
+}
+
 
 /*#########*/
 /* About */
@@ -685,25 +718,23 @@ form > *:last-child {
   width: 20%;
   border-top: 3px solid rgba(0, 0, 0, 0.1);
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-  margin: 0.8rem 0 0 0;
+  margin: 0.8rem 0;
 }
 .tags-container {
   order: 1;
   display: flex;
-  align-items: center;
   flex-direction: column;
 }
 .tags-list {
   display:flex;
-  align-items: center;
   flex-direction: column;
 }
 
 .tags-list-line {
   border: 0;
-  width: 70%;
+  width: 100%;
   height: 1rem;
-  border-top: 2px solid rgba(0, 0, 0, 0.1);
+  border-top: 3px solid rgba(0, 0, 0, 0.1);
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
   margin: 2rem 0 0.7rem 0;
 }
