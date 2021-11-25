@@ -3,7 +3,8 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import { StaticImage } from "gatsby-plugin-image"
-import BlogPostsList from '../components/BlogPostsList'
+import FeaturedBlogPosts from '../components/FeaturedBlogPosts'
+import SocialMediaBar from '../components/SocialMediaBar'
 
 const About = ( {data} ) => {
     return (
@@ -18,6 +19,7 @@ const About = ( {data} ) => {
                         placeholder="traced-svg"
                         layout="fullWidth">
                     </StaticImage>
+                    <SocialMediaBar position="center"/>
                     <article>
                         <h2 className="special-header">Take a breather!</h2>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat iusto aliquid officiis libero velit dicta, assumenda, odio mollitia voluptatibus dolorum alias ut recusandae! Recusandae nostrum modi assumenda voluptatum deleniti dolore.</p>
@@ -25,12 +27,7 @@ const About = ( {data} ) => {
                     </article>
                     
                 </section>
-                <section className="featured-blogPosts">
-                        <hr className="blog-item-line" />
-                        <h5>Up for a cozy read?</h5>
-                        <BlogPostsList blogPosts={data.allContentfulSimpleBlogPost.nodes}/>
-              </section>
-
+                <FeaturedBlogPosts />
             </main>
         </Layout>
     )
