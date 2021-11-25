@@ -32,8 +32,7 @@ export default function Home() {
             layout="fullWidth">
           </StaticImage>
           <article>
-            <h2 className="special-header">Take a breather!</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat iusto aliquid officiis libero velit dicta, assumenda, odio mollitia voluptatibus dolorum alias ut recusandae! Recusandae nostrum modi assumenda voluptatum deleniti dolore.</p>
+            <h1>Take a breather!</h1>
             <p>Fugiat iusto aliquid officiis libero velit dicta, assumenda, odio mollitia voluptatibus dolorum alias ut recusandae! Recusandae nostrum modi assumenda voluptatum deleniti dolore.</p>
           </article>
         </section>
