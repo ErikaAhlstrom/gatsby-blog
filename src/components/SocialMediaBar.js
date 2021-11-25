@@ -2,17 +2,17 @@ import React from 'react'
 import { BsFacebook, BsInstagram, BsTwitter } from 'react-icons/bs'
 import { Link } from 'gatsby'
 
-const SocialMediaBar = () => {
+const SocialMediaBar = ({ position = null }) => {
     return (
-        <div className="socialMediaBar">
+        <div className={`socialMediaBar ${position ? "center" : ""}`}>
             <a href="https://facebook.com">
-                <BsFacebook className="socialLink"/>
+                <BsFacebook size={25} className="socialLink"/>
             </a>
             <a href="https://instagram.com">
-                <BsInstagram className="socialLink"/>
+                <BsInstagram size={25} className="socialLink"/>
             </a>
             <a href="https://twitter.com">
-                <BsTwitter className="socialLink"/>
+                <BsTwitter size={25} className="socialLink"/>
             </a>
             
         </div>
