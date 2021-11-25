@@ -34,6 +34,7 @@ export const query = graphql`
         postedAt(formatString: "DD MMMM, YYYY")
         image {
           gatsbyImageData(placeholder: TRACED_SVG, layout: CONSTRAINED)
+          title
         }
         id
       }

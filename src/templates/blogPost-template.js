@@ -42,7 +42,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                 <div className="blogPost-page">
                         <GatsbyImage
                             image={pathToImage}
-                            alt={title}
+                            alt={image.title}
                             className="about-img"
                         />
                 </div>
@@ -70,6 +70,7 @@ export const query = graphql`
         }
         image {
             gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+            title
         }
     }
 }
