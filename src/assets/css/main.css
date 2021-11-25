@@ -513,8 +513,15 @@ form > *:last-child {
   color: var(--grey-1000);
 }
 
-.socialLink {
-  
+@media screen and (min-width: 992px) {
+  .socialMediaBar {
+    display: flex;
+    margin: 1.5rem 0;
+}
+  .center {
+    justify-content: left;
+    margin: 0;
+  }
 }
 
 /*#########*/
