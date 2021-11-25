@@ -2,8 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import BlogPostsList from '../components/BlogPostsList'
 import SocialMediaBar from '../components/SocialMediaBar'
+import FeaturedBlogPosts from '../components/FeaturedBlogPosts'
 
 
 const Contact = ( {data} ) => {
@@ -13,8 +13,8 @@ const Contact = ( {data} ) => {
                 <main className="page">
               <section className="layout-page">
                   <article className="contact-info">
-                      <h3>Want to get in touch?</h3>
                       <SocialMediaBar />
+                      <h3>Want to get in touch?</h3>
                       <p>I'm baby knausgaard pop-up edison bulb farm-to-table crucifix, wayfarers copper mug lyft trust fund banh mi vaporware whatever man bun art party. </p>
                       <p>Lo-fi four dollar toast fingerstache palo santo shabby chic adaptogen. Shabby chic affogato kitsch pug master cleanse enamel pin chillwave selfies. </p>
                       <p>Authentic messenger bag vape la croix irony, franzen chartreuse skateboard pitchfork intelligentsia cray. </p>
@@ -37,11 +37,7 @@ const Contact = ( {data} ) => {
                     </form>
                   </article>
               </section>
-              <section className="featured-blogPosts">
-                <hr className="blog-item-line" />
-                <h5>Up for a cozy read?</h5>
-                <BlogPostsList blogPosts={data.allContentfulSimpleBlogPost.nodes}/>
-              </section>
+              <FeaturedBlogPosts />
           </main>
         </Layout>
     )
