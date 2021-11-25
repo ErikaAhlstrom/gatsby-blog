@@ -5,8 +5,8 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: 'Simply A Blog',
-    description: 'Nice and clean blog site',
+    title: 'Plant Whisperer',
+    description: 'A blog for plant lovers',
     author: 'Erika Ahlström',
   },
   plugins: [
