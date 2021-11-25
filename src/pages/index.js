@@ -32,7 +32,7 @@ export default function Home() {
             layout="fullWidth">
           </StaticImage>
           <article>
-            <h1>Take a breather!</h1>
+            <h2>Take a breather!</h2>
             <p>Fugiat iusto aliquid officiis libero velit dicta, assumenda, odio mollitia voluptatibus dolorum alias ut recusandae! Recusandae nostrum modi assumenda voluptatum deleniti dolore.</p>
           </article>
         </section>

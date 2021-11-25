@@ -30,7 +30,7 @@ const FeaturedBlogPosts = () => {
     return (
         <section className="featured-blogPosts">
           <hr className="blog-item-line" />
-          <h1 >Featured blogposts</h1>
+          <h2 >Featured blogposts</h2>
           <BlogPostsList blogPosts={blogPosts}/>
         </section>
     )
