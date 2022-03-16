@@ -33,7 +33,7 @@ export default function Home() {
           </StaticImage>
           <article>
             <h2>Take a breather!</h2>
-            <p>Fugiat iusto aliquid officiis libero velit dicta, assumenda, odio mollitia voluptatibus dolorum alias ut recusandae! Recusandae nostrum modi assumenda voluptatum deleniti dolore.</p>
+            <p>The first thing is to realize that our struggle comes from an attachment. Review the list above and see if any of them apply. What if we could simply notice where we’re feeling attached to something?</p>
           </article>
         </section>
         <FeaturedBlogPosts />
