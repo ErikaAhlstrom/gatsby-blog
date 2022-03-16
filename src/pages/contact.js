@@ -15,9 +15,8 @@ const Contact = ( {data} ) => {
                   <article className="contact-info">
                       <SocialMediaBar />
                       <h3>Want to get in touch?</h3>
-                      <p>I'm baby knausgaard pop-up edison bulb farm-to-table crucifix, wayfarers copper mug lyft trust fund banh mi vaporware whatever man bun art party. </p>
-                      <p>Lo-fi four dollar toast fingerstache palo santo shabby chic adaptogen. Shabby chic affogato kitsch pug master cleanse enamel pin chillwave selfies. </p>
-                      <p>Authentic messenger bag vape la croix irony, franzen chartreuse skateboard pitchfork intelligentsia cray. </p>
+                      <p>To send a message, please use the form! </p>
+                      <p>While we can't respond to every message, we will attempt to respond within 24 hours. </p>
                   </article>
                   <article >
                     <form className="form contact-form" action="https://formspree.io/f/mleaqowj" method="POST">
