@@ -23,8 +23,10 @@ const About = ( {data} ) => {
                   <div>
                     <article>
                         <h1>Take a breather!</h1>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat iusto aliquid officiis libero velit dicta, assumenda, odio mollitia voluptatibus dolorum alias ut recusandae! Recusandae nostrum modi assumenda voluptatum deleniti dolore.</p>
-                        <p>Fugiat iusto aliquid officiis libero velit dicta, assumenda, odio mollitia voluptatibus dolorum alias ut recusandae! Recusandae nostrum modi assumenda voluptatum deleniti dolore.</p>
+                        <p>The first thing is to realize that our struggle comes from an attachment. Review the list above and see if any of them apply. It can be easy to point the finger in someone else’s direction, or to feel bad about things. But what if we could simply notice where we’re feeling attached to something?</p>
+                        <p>Try it now — is there something you’ve been frustrated about, avoiding, addicted to? Could you notice the attachment that you have and joyfully release it?
+
+</p>
                     </article>
                     <SocialMediaBar position="center"/>
                   </div>
